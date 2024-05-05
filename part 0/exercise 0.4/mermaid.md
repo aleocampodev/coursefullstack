@@ -1,4 +1,3 @@
-```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -25,4 +24,12 @@ sequenceDiagram
     activate server
     server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate server
-```
+
+    Note right of browser: 
+        The browser executes the callback function 
+        that renders the notes.
+        When the data has been fetched, 
+        the browser executes an event handler, 
+        which renders the notes to the page 
+        using the DOM-API.
+
