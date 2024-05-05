@@ -18,7 +18,8 @@ sequenceDiagram
     server-->>browser: the JavaScript file
     deactivate server
 
-    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+    Note right of browser: 
+        The browser starts executing the JavaScript code that fetches the JSON from the server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
@@ -27,7 +28,7 @@ sequenceDiagram
 
     Note right of browser: 
         The browser executes the callback function 
-        that renders the notes
+        that renders the notes.
         When the data has been fetched, 
         the browser executes an event handler, 
         which renders the notes to the page 
