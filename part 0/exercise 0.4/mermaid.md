@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram
     participant browser
     participant server
@@ -31,3 +32,4 @@ sequenceDiagram
         the browser executes an event handler, 
         which renders the notes to the page 
         using the DOM-API.
+```
