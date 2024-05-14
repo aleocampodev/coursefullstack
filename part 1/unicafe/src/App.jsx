@@ -14,10 +14,10 @@ function App() {
       <Header title={title}/>
       <div className="container-buttons">
         <Experiences nameButton={'good'} counterFeedbackButton={good} setCounterFeedBackButton={setGood}/>
-        <Experiences nameButton={'neutral'}/>
-        <Experiences nameButton={'bad'}/>
+        <Experiences nameButton={'neutral'} counterFeedbackButton={neutral} setCounterFeedBackButton={setNeutral}/>
+        <Experiences nameButton={'bad'} counterFeedbackButton={bad} setCounterFeedBackButton={setBad}/>
       </div>
-      <Statistics  good={good} bad={bad} neutral={neutral}/>
+      <Statistics  good={good} bad={bad} neutral={neutral} />
     </>
   )
 }
