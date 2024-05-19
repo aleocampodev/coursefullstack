@@ -4,7 +4,7 @@ import Experiences from './components/Experiences'
 import './App.css'
 
 const StatisticscLine = (props) => {
-  return <div>{props.text} {props.value}</div>
+  return <tr><td>{props.text} {props.value}</td></tr>
 }
 
 
@@ -29,14 +29,16 @@ const Statistics = (props) => {
   }
 
   return (
-    <>
-      <StatisticscLine text={'good'} value={props.good} />
-      <StatisticscLine text={'neutral'} value={props.neutral} />
-      <StatisticscLine text={'bad'} value={props.bad} />
-      <StatisticscLine text={'all'} value={props.all} />
-      <StatisticscLine text={'average'} value={props.average} />
-      <StatisticscLine text={'positive'} value={`${props.positivePercentage.toFixed(2)}%`} />
-    </>
+    <table>
+      <tbody>
+        <StatisticscLine text={'good'} value={props.good} />
+        <StatisticscLine text={'neutral'} value={props.neutral} />
+        <StatisticscLine text={'bad'} value={props.bad} />
+        <StatisticscLine text={'all'} value={props.all} />
+        <StatisticscLine text={'average'} value={props.average} />
+        <StatisticscLine text={'positive'} value={`${props.positivePercentage.toFixed(2)}%`} />
+      </tbody>
+    </table>
   )
 }
 
@@ -62,7 +64,7 @@ function App() {
       </div>
       <div>
         <Header title={subTitle} />
-        <Statistics good={good} neutral={neutral} bad={bad} all={all} average={average} positivePercentage={positivePercentage}/>
+        <Statistics good={good} neutral={neutral} bad={bad} all={all} average={average} positivePercentage={positivePercentage} />
       </div>
     </>
   )
