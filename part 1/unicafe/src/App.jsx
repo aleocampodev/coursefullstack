@@ -16,6 +16,8 @@ function App() {
   const average = all !== 0 ? (good - bad) / all : 0;
   const positivePercentage = all !== 0 || good !== 0 ? (good / all) * 100 : 0;
 
+
+
   return (
     <>
       <Header title={title} />
@@ -25,16 +27,20 @@ function App() {
         <Experiences nameButton={'bad'} counterFeedbackButton={bad} setCounterFeedBackButton={setBad} />
       </div>
       <div>
-        <h2><strong>statistics</strong></h2>
-        <Statistics text={'good'} value={good} />
-        <Statistics text={'neutral'} value={neutral} />
-        <Statistics text={'bad'} value={bad} />
-        <Statistics text={'all'} value={all} />
-        <Statistics text={'average'} value={average} />
-        <Statistics text={'positive'} value={`${positivePercentage.toFixed(2)}%`} />
+        {
+          all === 0 ? (<p>No given feedback</p>) :
+            (<>
+              <h2><strong>statistics</strong></h2>
+              <Statistics text={'good'} value={good} />
+              <Statistics text={'neutral'} value={neutral} />
+              <Statistics text={'bad'} value={bad} />
+              <Statistics text={'all'} value={all} />
+              <Statistics text={'average'} value={average} />
+              <Statistics text={'positive'} value={`${positivePercentage.toFixed(2)}%`} />
+            </>)
+        }
+
       </div>
-
-
     </>
   )
 }
