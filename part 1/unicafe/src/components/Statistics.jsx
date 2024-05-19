@@ -8,7 +8,7 @@ const Statistics = ({ good, neutral, bad, all, average, positive}) => {
       <div>{`neutral ${neutral}`}</div>
       <div>{`bad ${bad}`}</div>
       <div>{`all ${all}`}</div>
-      <div>{`average ${Number(average)}`}</div>
+      <div>{`average ${average}`}</div>
       <div>{`positive ${positive}`}</div>
     </div>
   )

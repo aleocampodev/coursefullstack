@@ -10,7 +10,7 @@ function App() {
   const [bad, setBad] = useState(0)
   const title = 'give feedback'
   const all = good + neutral + bad;
-  const average = all !== 0 ? Math.abs((good - bad) / all, 0) : 0;
+  const average = all !== 0 ? (good - bad) / all : 0;
   const positivePercentage = all !== 0 || good !== 0? (good / all) * 100: 0;
 
   return (
