@@ -1,0 +1,8 @@
+.container-anecdotes{
+  display: flex;
+  flex-direction: column;
+ }
+
+ button{
+  width:150px
+ }
