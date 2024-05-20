@@ -3,6 +3,11 @@
   flex-direction: column;
  }
 
- button{
-  width:150px
+ .container-buttons{
+  display: flex;
  }
+
+ button{
+  width:auto;
+ }
+

@@ -32,8 +32,11 @@ function App() {
     <div className="container-anecdotes">
       {anecdotes[selected]}
       <p>{`has ${allVotes[selected]} votes `}</p>
-      <button onClick={handleClick}>next anecdote</button>
-      <button onClick={handleVoteClick}>vote</button>
+      <div className="container-buttons">
+        <button onClick={handleVoteClick}>vote</button>
+        <button onClick={handleClick}>next anecdote</button>
+      </div>
+      
     </div>
   )
 }
